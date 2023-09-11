@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Current Weather Website</title>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo"><h2>Weather Check</h2></a>
+    </nav>
+<section id="main">  
+    <div class="container">
+    <form action="/" method="post">
+        <input type="text" class="text-box" name="city" placeholder="Enter Location">
+        <button type="submit" class="btn">CHECK</button>
+    </form> 
+    </div>
+    <br>
+    <div class="show-result">   
+        <div class="output"><h3 style="color:rgb(6, 9, 6); font-size:22px; font-weight:bold;  font-family:'Arial', Courier, monospace; ">Temp:</h3>{{temperature}} °C</div>
+        <div class="output"><h3 style="color:rgb(9, 14, 9); font-size:22px; font-weight:bold;  font-family:'Arial', Courier, monospace; ">Humidity:</h3>{{humidity}} %</div>
+        <div class="output"><h3 style="color:rgb(17, 24, 17); font-size:22px; font-weight:bold;  font-family:'Arial', Courier, monospace; ">Pressure:</h3>{{pressure}} mb</div>
+        <div class="output"><h3 style="color:rgb(17, 21, 17); font-size:22px; font-weight:bold;  font-family:'Arial', Courier, monospace; ">Wind Speed:</h3>{{wind}} Km/h</div>
+    </div>
+</section>    
+</html>
