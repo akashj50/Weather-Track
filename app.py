@@ -17,10 +17,10 @@ def index():
         json_object = r.json()
 
         #take some attributes like temperature,humidity,pressure of this 
-        temperature = float(json_object['main']['temp']-273.15) #this temparetuure in kelvin
-        humidity = float(json_object['main']['humidity'])
-        pressure = float(json_object['main']['pressure'])
-        wind = float(json_object['wind']['speed'])
+        temperature = round(float(json_object['main']['temp']-273.15),2) #this temparetuure in kelvin
+        humidity = round(float(json_object['main']['humidity']),2)
+        pressure = round(float(json_object['main']['pressure']),2)
+        wind = round(float(json_object['wind']['speed']),2)
 
         #atlast just pass the variables
         
